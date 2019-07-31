@@ -76,7 +76,7 @@ public class TaplighReactNativeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void initialize(String token, boolean testMode){
+    public void setToken(String token, boolean testMode){
         if (tapligh != null) {
             tapligh.setToken(token, testMode);
         }
