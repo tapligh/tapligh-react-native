@@ -2,7 +2,7 @@ import {
     Platform
 } from 'react-native';
 
-let Tapligh = require("react-native").NativeModules.Tapligh;
+let Tapligh = require("react-native").NativeModules.TaplighReactNative;
 
 module.exports = {
     UNIT_CODE_KEY: Tapligh.UNIT_CODE_KEY,
