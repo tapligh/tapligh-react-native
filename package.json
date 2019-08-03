@@ -1,6 +1,6 @@
 {
   "name": "tapligh-react-native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tapligh SDK Wrapper for React-Native platform",
   "main": "index.js",
   "scripts": {
