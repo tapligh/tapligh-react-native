@@ -1,8 +1,7 @@
-
 {
-  "name": "react-native-tapligh",
+  "name": "tapligh-react-native",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tapligh SDK Wrapper for React-Native platform",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,11 +9,14 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": "Tapligh",
+  "license": "ISC",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
-
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tapligh/tapligh-react-native.git"
   }
 }
