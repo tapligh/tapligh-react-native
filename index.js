@@ -15,42 +15,44 @@ callback[consts.ON_TOKEN_VERIFIED_EVENT] = {};
 
 DeviceEventEmitter.addListener(consts.ON_AD_READY_EVENT, (event) => {
     if(callback[consts.ON_AD_READY_EVENT]) {
+        console.log(consts.UNIT_CODE_KEY);
         callback[consts.ON_AD_READY_EVENT](
-            event[consts.KEY_UNIT_CODE],
-            event[consts.KEY_AD_TOKEN]
+            event[consts.UNIT_CODE_KEY],
+            event[consts.AD_TOKEN_KEY]
         )
     }
 })
 DeviceEventEmitter.addListener(consts.ON_LOAD_ERROR_EVENT, event => {
     if(callback[consts.ON_LOAD_ERROR_EVENT]) {
         callback[consts.ON_LOAD_ERROR_EVENT](
-            event[consts.KEY_UNIT_CODE],
-            event[consts.KEY_LOAD_ERROR]
+            event[consts.UNIT_CODE_KEY],
+            event[consts.LOAD_ERROR_STATUS_KEY]
         )
     }
 })
 DeviceEventEmitter.addListener(consts.ON_AD_RESULT_EVENT, event => {
     if(callback[consts.ON_AD_RESULT_EVENT]) {
         callback[consts.ON_AD_RESULT_EVENT](
-            event[consts.KEY_AD_RESULT],
-            event[consts.KEY_AD_TOKEN]
+            event[consts.AD_RESULT_STATUS_KEY],
+            event[consts.AD_TOKEN_KEY]
         )
     }
 })
 DeviceEventEmitter.addListener(consts.ON_REWARD_READY_EVENT, event => {
     if(callback[consts.ON_REWARD_READY_EVENT]) {
         callback[consts.ON_REWARD_READY_EVENT](
-            event[consts.KEY_REWARD]
+            event[consts.REWARD_KEY]
         )
     }
 })
 DeviceEventEmitter.addListener(consts.ON_TOKEN_VERIFIED_EVENT, event => {
     if(callback[consts.ON_TOKEN_VERIFIED_EVENT]) {
         callback[consts.ON_TOKEN_VERIFIED_EVENT](
-            event[consts.KEY_TOKEN_RESULT]
+            event[consts.TOKEN_RESULT_STATUS_KEY]
         )
     }
 })
+
 
 module.exports = {
     initialize: function() {
