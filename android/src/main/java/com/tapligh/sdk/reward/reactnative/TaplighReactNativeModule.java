@@ -44,10 +44,6 @@ public class TaplighReactNativeModule extends ReactContextBaseJavaModule {
     public TaplighReactNativeModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.context = reactContext;
-
-        if (getCurrentActivity() != null && tapligh == null) {
-            tapligh = Tapligh.newInstance(getCurrentActivity());
-        }
     }
 
     @Nullable
@@ -73,6 +69,14 @@ public class TaplighReactNativeModule extends ReactContextBaseJavaModule {
     @Override
     public String getName() {
         return "TaplighReactNative";
+    }
+
+
+    @ReactMethod
+    public void initialize() {
+        if (tapligh == null) {
+            tapligh = Tapligh.newInstance(getCurrentActivity());
+        }
     }
 
     @ReactMethod
