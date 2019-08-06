@@ -34,7 +34,7 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    implementation files('libs/Tapligh-library-v3.0.10.jar')
+    implementation files('libs/Tapligh-library-v3.0.12.jar')
 
 }
   
