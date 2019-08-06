@@ -131,7 +131,7 @@ public class TaplighReactNativeModule extends ReactContextBaseJavaModule {
                 WritableMap map = Arguments.createMap();
                 map.putString(REWARD_KEY, reward);
 
-                sendMessageToReact(context, REWARD_KEY, map);
+                sendMessageToReact(context, ON_REWARD_READY_EVENT, map);
             }
         });
     }
